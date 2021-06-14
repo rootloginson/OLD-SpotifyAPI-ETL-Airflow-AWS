@@ -1,0 +1,25 @@
+2021-06-14 18:20:13,571 : INFO : custom_exception_check : Spotify App executed. (time format: gmtime)
+2021-06-14 18:20:13,806 : INFO : custom_exception_check : request_status=SUCCESS, status_code=200, request_from=Tokens.get_client_credential_access_token
+2021-06-14 18:20:13,971 : INFO : custom_exception_check : request_status=SUCCESS, status_code=200, request_from=Tokens.get_access_token_with_scope
+2021-06-14 18:20:14,158 : INFO : custom_exception_check : request_status=SUCCESS, status_code=200, request_from=Spochastify.post_search_request
+2021-06-14 18:20:14,369 : INFO : custom_exception_check : request_status=SUCCESS, status_code=201, request_from=Spochastify.add_track_to_playlist
+
+2021-06-14 18:24:51,013 : INFO : custom_exception_check : Spotify App executed. (time format: gmtime)
+2021-06-14 18:24:51,224 : INFO : custom_exception_check : request_status=SUCCESS, status_code=200, request_from=Tokens.get_client_credential_access_token
+2021-06-14 18:24:51,412 : INFO : custom_exception_check : request_status=SUCCESS, status_code=200, request_from=Tokens.get_access_token_with_scope
+2021-06-14 18:24:51,594 : INFO : custom_exception_check : request_status=SUCCESS, status_code=200, request_from=Spochastify.post_search_request
+2021-06-14 18:24:51,801 : INFO : custom_exception_check : request_status=SUCCESS, status_code=201, request_from=Spochastify.add_track_to_playlist
+
+2021-06-14 18:24:58,598 : INFO : custom_exception_check : Spotify App executed. (time format: gmtime)
+2021-06-14 18:24:58,604 : ERROR : custom_exception_check : request_status=FAILED, requests.exception=ConnectionError, request_from=Tokens.get_client_credential_access_token
+
+2021-06-14 18:25:09,381 : INFO : custom_exception_check : Spotify App executed. (time format: gmtime)
+2021-06-14 18:25:09,581 : INFO : custom_exception_check : request_status=SUCCESS, status_code=200, request_from=Tokens.get_client_credential_access_token
+2021-06-14 18:25:09,743 : INFO : custom_exception_check : request_status=SUCCESS, status_code=200, request_from=Tokens.get_access_token_with_scope
+2021-06-14 18:25:09,958 : INFO : custom_exception_check : request_status=SUCCESS, status_code=200, request_from=Spochastify.post_search_request
+2021-06-14 18:25:10,166 : INFO : custom_exception_check : request_status=SUCCESS, status_code=200, request_from=Spochastify.post_search_request
+2021-06-14 18:25:10,427 : INFO : custom_exception_check : request_status=SUCCESS, status_code=201, request_from=Spochastify.add_track_to_playlist
+
+2021-06-14 18:26:31,206 : INFO : custom_exception_check : Spotify App executed. (time format: gmtime)
+2021-06-14 18:26:31,413 : INFO : custom_exception_check : request_status=SUCCESS, status_code=200, request_from=Tokens.get_client_credential_access_token
+2021-06-14 18:26:31,607 : ERROR : custom_exception_check : request_status=FAILED, requests.exception=HTTPError, request_from=Tokens.get_access_token_with_scope
