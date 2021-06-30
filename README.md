@@ -16,8 +16,9 @@ Purpose of the repository in a nutshell,
         Add this track to playlist
         Log the process
     
-    - Airflow, scheduling : (will be added..)
-        Scheduling this process with airflow to run for 365 days once in a day 
+    - Airflow, scheduling : (added. June 30, 2021)
+        Scheduling this process with airflow to run for 365 days once in a day
+        ([Log file of triggered spotify_app](https://raw.githubusercontent.com/rootloginson/SpotifyAPI-ETL-Airflow-AWS/master/airflow_execution_log/airflow_log_triggered_spotify_app.png))
     
     - Amazon AWS : (will be added)
         Running on AWS instance
