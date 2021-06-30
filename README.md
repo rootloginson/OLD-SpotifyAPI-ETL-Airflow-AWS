@@ -18,8 +18,7 @@ Purpose of the repository in a nutshell,
     
     - Airflow, scheduling : (added. June 30, 2021)
         Scheduling this process with airflow to run for 365 days once in a day
-        ([Log file of triggered spotify_app](https://raw.githubusercontent.com/rootloginson/SpotifyAPI-ETL-Airflow-AWS/master/airflow_execution_log/airflow_log_triggered_spotify_app.png))
-    
+       
     - Amazon AWS : (will be added)
         Running on AWS instance
 
@@ -96,7 +95,12 @@ For example:
     
 > If there is a valid client_id and secret_id; Tokens.get_client_credential_access_token method call will be successful. And if there is a invalid refresh token, Tokens.get_access_token_with_scope method call will cause a HTTPError.
 
-> If there is a request from Spochastify.post_search_request more than 1 time (2 times in given case), even the request is successful, that indicates the first search request returned a empty track list.  
+> If there is a request from Spochastify.post_search_request more than 1 time (2 times in given case), even the request is successful, that indicates the first search request returned a empty track list.
+
+[Python log file example of test cases](https://github.com/rootloginson/SpotifyAPI-ETL-Airflow-AWS/blob/master/spotify_app.log)
+
+[Airflow log file of triggered spotify_app](https://raw.githubusercontent.com/rootloginson/SpotifyAPI-ETL-Airflow-AWS/master/airflow_execution_log/airflow_log_triggered_spotify_app.png)
+
 ---
 <p>&nbsp;</p>
 
