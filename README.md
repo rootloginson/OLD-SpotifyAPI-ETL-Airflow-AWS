@@ -48,7 +48,7 @@ In order to to achieve 'Spotify Application' section, 2 API request is necessary
 - To get random track, only a client_id and client_secret is needed. These can be found on Spotify Developer Dashboard. These strings will take the place of the ones in *hidden.py*. Then, track uri can be obtained by running ```demo_get_track.py``` script. (This process is "*API request for search*", as mentioned above.)
 
 
-- If the application is to be used as intended, refresh token will be needed. And this process has been briefly described above. A detailed explanation and process map can be found in class docstrings and method docstrings. After getting the refresh token, user that authorized the application needs to create a public playlist and change the 'PLAYLIST_ID' global variable in spotify_app.py with the id of this playlist that is newly created.
+- If the application is to be used as intended, refresh token will be needed. And this process has been briefly described above. A detailed explanation and process map can be found in class docstrings and method docstrings. After getting the refresh token, user that authorized the application needs to create a public playlist and change the 'playlist_id' variable inside of the function 'get_playlist_id' in ```spotify_app.py``` with the id of this playlist that is newly created.
 
 <p>&nbsp;</p>
 

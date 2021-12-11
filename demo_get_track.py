@@ -4,9 +4,6 @@ import api_task_requests
 from custom_exception_check import trigger_starttime_log
 
 
-PLAYLIST_ID = '7xA9OjNeAAaBvZ2WJLHbDT'
-
-
 def random_string() -> str:
     consonants = "bcçdfgğhjklmnpqrstvwxyz"
     vowels = "aeıioöuü"
@@ -74,5 +71,6 @@ def run_spotify_app():
         return None
 
 
-res = run_spotify_app()
-print(res)
+if __name__ == '__main__':
+    res = run_spotify_app()
+    print(res)

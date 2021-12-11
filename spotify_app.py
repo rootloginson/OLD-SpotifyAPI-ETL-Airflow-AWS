@@ -4,7 +4,9 @@ import api_task_requests
 from custom_exception_check import trigger_starttime_log
 
 
-PLAYLIST_ID = '7xA9OjNeAAaBvZ2WJLHbDT'
+def get_playlist_id():
+    playlist_id = '7xA9OjNeAAaBvZ2WJLHbDT'
+    return playlist_id
 
 
 def random_string() -> str:
@@ -90,7 +92,7 @@ def run_spotify_app():
     r_add_track = spochastify.add_track_to_playlist(
                           access_token_with_scope,
                           random_track_uri,
-                          PLAYLIST_ID
+                          get_playlist_id()
                           )
     if r_add_track is None:   # exception contol such as Connection Error
         return None
