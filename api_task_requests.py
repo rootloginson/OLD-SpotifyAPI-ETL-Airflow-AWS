@@ -37,9 +37,9 @@ class Spochastify(CustomRequestExceptionCheck):
                 response object of the 'post_search_request' method
 
         Returns  :
-            tracks_uri_list (list)  : If tracks are found in the search,
-                                      returns id list of tracks
-            None        (NoneType)  : If search result is empty.
+            returned_items_list (list)  : If tracks are found in the search,
+                                          returns id list of tracks
+            None        (NoneType)      : If search result is empty.
 
         >>> r_search['tracks']
         dict_keys(['href', 'items', 'limit', 'next',
@@ -55,9 +55,9 @@ class Spochastify(CustomRequestExceptionCheck):
                    'type', 'uri'])
         """
         results = r_search.json()
-        returned_items = results['tracks']['items']
-        if returned_items:
-            return [item['uri'] for item in returned_items]
+        returned_items_list = results['tracks']['items']
+        if returned_items_list:
+            return returned_items_list
         else:
             return None
 
@@ -84,3 +84,54 @@ class Spochastify(CustomRequestExceptionCheck):
                 lambda: requests.post(url, headers=headers),
                 )
         return r
+
+    def extract_track_info(self, random_track_item: dict) -> dict:
+        """
+            Argument :
+                random_track_item (dict) : Information about spotify track
+
+            Returns  :
+                track_details (dict)  :
+                    track_details = {
+                        'artist_name': artist_name,
+                        'album_name': album_name,
+                        'track_name': track_name,
+                        'track_external_urls': track_external_urls,
+                        'track_uri': track_uri
+                    }
+        """
+        try:
+            artist_name = random_track_item['artists'][0]['name']
+        except KeyError:
+            artist_name = 'Not Available'
+
+        try:
+            album_name = random_track_item['album']['name']
+        except KeyError:
+            album_name = 'Not Available'
+
+        try:
+            track_name = random_track_item['name']
+        except KeyError:
+            track_name = 'Not Available'
+
+        try:
+            track_external_urls = random_track_item['external_urls']['spotify']
+        except KeyError:
+            track_external_urls = 'Not Available'
+
+        try:
+            track_uri = random_track_item['uri']  #to add into playlist
+        except KeyError:
+            track_uri = 'Not Available'
+
+        track_details = {
+            'artist_name': artist_name,
+            'album_name': album_name,
+            'track_name': track_name,
+            'track_external_urls': track_external_urls,
+            'track_uri': track_uri
+            }
+
+        return track_details
+

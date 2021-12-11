@@ -27,7 +27,7 @@ def run_spotify_app():
     r = None                 # requests.models.Response object
     r_search = None          # requests.models.Response object
     search_word = ''         # word for track search request
-    tracks_uri_list = []     # track list retrieved due to search request
+    returned_items_list = []     # track list retrieved due to search request
     random_track_uri = None  # track to add to playlist
 
     # adds approximate function call time(GMT 0:00 format) to log file.
@@ -59,13 +59,15 @@ def run_spotify_app():
             return None
         # 200: OK - The request has succeeded.
         elif r_search.status_code == 200:
-            tracks_uri_list = spochastify.get_list_of_tracks(r_search)
+            returned_items_list = spochastify.get_list_of_tracks(r_search)
         else:
             return r_search
-        # if there is track in track list, pick a random track
-        if tracks_uri_list:
-            random_track_uri = random.choice(tracks_uri_list)
-            return random_track_uri
+        # if there is a track in track list, pick a random track
+        if returned_items_list:
+            # pick one of the returned items
+            random_track_item = random.choice(returned_items_list)
+            track_details = spochastify.extract_track_info(random_track_item)
+            return track_details
     else:
         print("Failed to retrieve any tracks list")
         return None
