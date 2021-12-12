@@ -118,9 +118,9 @@ CREATE TABLE IF NOT EXISTS Random_Tracks(
             track_uri TEXT
 )
 ```
-[SQL Database Output Image]()  
+[SQL Database Output Image](https://github.com/rootloginson/SpotifyAPI-ETL-Airflow-AWS/blob/master/sql_database_screenshot/sql_db_ss.png?raw=true)  
 
-The database update: [database_update.py]().
+The database update: [database_update.py](https://github.com/rootloginson/SpotifyAPI-ETL-Airflow-AWS/blob/master/database_update.py).
 
 ---
 <p>&nbsp;</p>
