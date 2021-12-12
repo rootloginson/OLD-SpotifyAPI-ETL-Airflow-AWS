@@ -24,11 +24,11 @@ def run_spotify_app():
     token = auth.Tokens()
     client_credential_access_token = ''
 
-    r = None                 # requests.models.Response object
-    r_search = None          # requests.models.Response object
-    search_word = ''         # word for track search request
-    returned_items_list = []     # track list retrieved due to search request
-    random_track_uri = None  # track to add to playlist
+    r = None              # requests.models.Response object
+    r_search = None       # requests.models.Response object
+    search_word = ''           # word for track search request
+    returned_items_list = []   # track list retrieved due to search request
+    random_track_uri = None    # track to add to playlist
 
     # adds approximate function call time(GMT 0:00 format) to log file.
     _ = trigger_starttime_log()
@@ -74,5 +74,5 @@ def run_spotify_app():
 
 
 if __name__ == '__main__':
-    res = run_spotify_app()
-    print(res)
+    track_details = run_spotify_app()
+    print(track_details)

@@ -18,7 +18,11 @@ Purpose of the repository in a nutshell,
     
     - Airflow, scheduling : (added. June 30, 2021)
         Scheduling this process with airflow to run for 365 days once in a day
-       
+    
+    - SQL Relational Database, storing the track information : (added. December 12, 2021)
+        Each time a track is added to the playlist, it adds the track information, 
+        date and time information to the SQL Database.
+        
     - Amazon AWS : (will be added)
         Running on AWS instance
 
@@ -78,7 +82,7 @@ It is aimed to apply the DRY principle. New Authorization Flows can be added int
     
 In addition , there is an advanced library called [***Spotipy Library***](https://spotipy.readthedocs.io/en/2.18.0/).
 
-
+---
 #### **Interpreting the Logs**
 
 Log file contains:
@@ -102,7 +106,24 @@ For example:
 [Airflow log file of triggered spotify_app](https://raw.githubusercontent.com/rootloginson/SpotifyAPI-ETL-Airflow-AWS/master/airflow_execution_log/airflow_log_triggered_spotify_app.png)
 
 ---
+#### **Interpreting the SQL Table**
+```sql
+CREATE TABLE IF NOT EXISTS Random_Tracks(
+            id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+            date_time TEXT,
+            artist_name TEXT,
+            album_name TEXT,
+            track_name TEXT,
+            track_external_url TEXT,
+            track_uri TEXT
+)
+```
+[SQL Database Output Image]()  
+
+The database update: [database_update.py]().
+
+---
 <p>&nbsp;</p>
 
-### Time Saver for developers:
+### Time Saver for Developers:
 For GET and POST requests, some endpoints and parameters are passed as arguments and keyword arguments. Some of them are passed as encoded url.
