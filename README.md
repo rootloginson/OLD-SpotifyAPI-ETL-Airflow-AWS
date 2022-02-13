@@ -1,4 +1,4 @@
-# SpotifyAPI-ETL-Airflow-AWS
+# OLD \ SpotifyAPI-ETL-Airflow-AWS
 Scheduled automated system for adding random tracks to a Spotify playlist.
 
 ### **Project motivation** 
@@ -23,7 +23,7 @@ Purpose of the repository in a nutshell,
         Each time a track is added to the playlist, it adds the track information, 
         date and time information to the SQL Database.
         
-    - Amazon AWS : (will be added)
+    - Amazon AWS : (cancelled)
         Running on AWS instance
 
 
